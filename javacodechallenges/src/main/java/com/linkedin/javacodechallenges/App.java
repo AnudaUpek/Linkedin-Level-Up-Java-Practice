@@ -10,13 +10,8 @@ public class App {
         if(gallonsUsage < 1497){
             return 18.84;
         } else {
-            double ccfs = Math.ceil((gallonsUsage - 1496) / 748);
-            // System.out.println(ccfs);
-            
-            
-            //System.out.println(cc);
-            double bill = 18.84 + (ccfs * 3.90);
-            //System.out.println(cc);
+            double ccfs = Math.ceil((gallonsUsage - 1496) / 748);            
+            double bill = 18.84 + (ccfs * 3.90);           
             return bill;
         }
         
