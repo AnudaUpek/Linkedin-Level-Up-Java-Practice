@@ -1,14 +1,32 @@
 package com.linkedin.javacodechallenges;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
 public class App {
+    
+    private static final List<String> c = null;
+
     public static List<String> findStudentsWithIncompleteVolunteerEvents(
             List<String> students,
             Map<String, List<String>> attendeesMapping) {
         // TODO: implement function
-        return List.of();
+        List<String> c = new ArrayList<>();
+        for(String i : students){
+            int count = 0;                        
+            for(var j : attendeesMapping.entrySet()){
+                for(String k : j.getValue()){
+                    if(i.equals(k)){
+                        count++;
+                    }
+                }                
+            }
+            if(count<2){
+                c.add(i);
+            }
+        }        
+        return c;
     }
 
     public static void main(String[] args) {
